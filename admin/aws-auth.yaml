@@ -12,9 +12,9 @@ data:
       userarn: arn:aws:iam::468428427679:user/ramesh
       username: ramesh
     - groups:
-      - eks-console-dashboard-restricted-access-group      
-      userarn: arn:aws:iam::444455556666:user/my-user
-      username: my-user    
+      - roboshop-admin
+      userarn: arn:aws:iam::468428427679:user/raheem
+      username: raheem    
 kind: ConfigMap
 metadata:
   creationTimestamp: "2024-03-04T09:39:05Z"
