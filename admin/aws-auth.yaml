@@ -4,19 +4,22 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::315069654700:role/eksctl-roboshop-cluster-nodegroup--NodeInstanceRole-yZS3T6m0Z2Am
+      rolearn: arn:aws:iam::468428427679:role/eksctl-roboshop-nodegroup-spot-NodeInstanceRole-cjNp0I1gpEsg
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     - groups:
       - roboshop-pod-reader
-      userarn: arn:aws:iam::315069654700:user/ramesh
+      userarn: arn:aws:iam::468428427679:user/ramesh
       username: ramesh
     - groups:
-      - roboshop-admin
-      userarn: arn:aws:iam::315069654700:user/raheem
-      username: raheem
+      - eks-console-dashboard-restricted-access-group      
+      userarn: arn:aws:iam::444455556666:user/my-user
+      username: my-user    
 kind: ConfigMap
 metadata:
+  creationTimestamp: "2024-03-04T09:39:05Z"
   name: aws-auth
   namespace: kube-system
-  uid: c545fed5-5d66-41bb-be7b-13e318a33fd2
+  resourceVersion: "1273"
+  uid: 3d92e3fc-3a6a-4c5c-afee-4430288f762e
+
